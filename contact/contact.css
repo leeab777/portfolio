@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;   /*prevent scrolling*/
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;   /*make the body element the reference point for positioning*/
+    background: linear-gradient(to bottom right, 
+                rgba(25, 128, 232, 0.8) 0%,
+                #1e90ff 5%,    
+                rgba(20, 126, 232, 0.6) 40%,   
+                rgba(30, 144, 255, 0.8) 70%,   
+                rgba(30, 144, 255, 0.3) 90%), 
+                rgba(30, 144, 255, 0) 100%;
+    height: 100vh;       
+    transition: background 2s ease;      
+}
+
+.contactme {
+    margin-left: 12%;
+    margin-top: 4%
+}
+ 
+.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+#threejs-container {
+    position: absolute;
+    display: flex;
+    top: 35%;
+    width: 46vh;          /*card takes 46% of veiwpot width*/
+    height: 36vh;        /*card takes 36% of veiwport height*/
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;       /*create 3d effect*/
+    z-index: 1;
+}
+
+.card {
+    width: 100%;    /*card takes 100% of containers width*/
+    height: 74%;
+    position: relative;
+    transform-style: preserve-3d;  /*allows the card to flip in 3d*/
+    animation: spin 10s infinite linear;   /*continuous spin animation*/
+    aspect-ratio: 16/9;  /*maintain a 16:9 ratio*/
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    backface-visibility: hidden;   /*hides the back when flipped*/
+}
+
+.card-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;    /*stacke items vertically*/
+    align-items: flex-start;     /*align items left*/
+    justify-content: flex-start;
+    padding: 20px;                /*space between items*/
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-back {
+    background-color:antiquewhite;
+    display: flex;
+    justify-content: center;     /*center content vertically*/
+    align-items: center;          /*center content horizontally*/
+    text-align: center;            /*ensure test is centered*/
+    padding: 20px;
+    height: 100%;                  /*ensure back takes up full height*/
+    transform: rotateY(180deg);     /*flip the back side*/
+}
+
+.card-back p {
+    margin: 0;
+}
+
+.card:hover  {     /*adding a smooth spin before hovering*/
+    animation: none;    
+    transform: rotateY(0deg);
+}
+
+@keyframes spin {
+    0%{
+        transform: rotateY(0deg);   /*start with the front*/
+        
+    }
+    25% {
+        transform: rotateY(90deg);   /*card reaches 90deg*/
+        
+    }
+    50%{
+        transform: rotateY(180deg);     /*card rotate*/
+    }
+    75% {
+        transform: rotateY(270deg);
+        
+    }
+    100%{
+        transform: rotateY(360deg);  /*full rotation*/
+        
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#threejs-container canvas {
+    transform: scale(0.8);
+}

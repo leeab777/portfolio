@@ -1,0 +1,138 @@
+.text-box-clone {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 9vw;
+    width: 40vw;
+    top: -80%;
+    right: 6%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-wdash {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 9vw;
+    width: 40vw;
+    top: -80%;
+    right: 6%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-clone, .small-hex-bar-wdash, .small-hex-bar-under-con {
+    position: relative;
+}
+
+.small-hex-bar-clone:hover .text-box-clone {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+
+.small-hex-bar-wdash:hover .text-box-wdash {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-under-con:hover .text-box-under-con {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-container {
+    position: relative;
+    display: flex;
+    height: 10%;
+}
+
+@media (max-width: 1000px) {
+    .text-box-clone, .text-box-wdash {
+        top: -20%;
+        height: 14vw;
+    }
+}
+
+@media (max-width: 800px){
+    .text-box-clone, .text-box-wdash {
+        top: -20%;
+        right: 8%;
+        height: 20vw;
+        width: 45vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 680px) {
+    .text-box-clone, .text-box-wdash {
+        top: -20%;
+        right: 15%;
+        height: 35vw;
+        width: 35vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-box-clone, .text-box-wdash{
+        top: -15%;
+        right: 10%;
+        height: 50vw;
+        width: 40vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .text-box-clone, .text-box-wdash{
+        top: -10%;
+        right: 15%;
+        height: 65vw;
+        width: 55vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .text-box-clone, .text-box-wdash{
+        top: -5%;
+        right: 10%;
+        height: 85vw;
+        width: 56vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 250px) {
+    .text-box-clone, .text-box-wdash{
+        font-size: 8px;
+    }
+}

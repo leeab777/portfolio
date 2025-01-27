@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;   /*prevent scrolling*/
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;   /*make the body element the reference point for positioning*/
+    background: linear-gradient(to bottom left, 
+                rgba(25, 128, 232, 0.8) 0%,
+                #1e90ff 5%,    
+                rgba(20, 126, 232, 0.6) 40%,   
+                rgba(30, 144, 255, 0.8) 70%,   
+                rgba(30, 144, 255, 0.3) 90%), 
+                rgba(30, 144, 255, 0) 100%;
+    height: 100vh;       
+    transition: background 2s ease;      
+}
+
+.aboutme {
+    margin-left: 12%;
+    margin-top: 4%;
+}
+ 
+.text-container {
+    margin: 2% auto;
+    padding: 2%;
+    width: 80%;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    border: solid black 1px;
+}
+
+.p {
+    font-size: 8;
+    font-weight: normal;
+}

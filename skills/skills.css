@@ -1,0 +1,145 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /*prevent scrolling*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    /*make the body element the reference point for positioning*/
+    background: linear-gradient(to top left,
+            rgba(25, 128, 232, 0.8) 0%,
+            #1e90ff 5%,
+            rgba(20, 126, 232, 0.6) 40%,
+            rgba(30, 144, 255, 0.8) 70%,
+            rgba(30, 144, 255, 0.3) 90%),
+        rgba(30, 144, 255, 0) 100%;
+    height: 100vh;
+    transition: background 2s ease;
+}
+
+.skills {
+    margin-left: 12%;
+    margin-top: 4%;
+}
+
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin: 2% auto;
+    width: 60%;
+}
+
+.skills-box {
+    margin: 2% auto;
+    padding: 2%;
+    width: 80%;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    gap: 0.5vw;
+    border: solid black 1px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*center-align content*/
+    padding: 0.5vw;
+    /*padding for items*/
+    width: 6vw;
+    /*width for itmes*/
+    border-radius: 10px;
+}
+
+.skill-icon {
+    width: 5vw;
+    /* Adjust the size of skill icons */
+    height: 5vw;
+    margin-bottom: 2px;
+    /* Space below the icon */
+
+
+}
+
+.skill-item p {
+    font-size: 1.2vw;
+    /* Adjust font size */
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    max-width: 100%;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 1rem;
+    border-radius: 1px;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    /*width of circle*/
+    height: 6px;
+    /*height of circle*/
+    background-color: black;
+    border-radius: 50%;
+}
+
+.soft-skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 2vw;
+    /*adjust space between soft skills n list*/
+    position: absolute;
+    bottom: 10px;
+    /*align with bottom of box*/
+    left: 40%;
+    right: 0;
+    padding: 0 2vw;
+}
+
+.soft-skills {
+    font-size: 2vw;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.soft-skills-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.soft-skills-list li {
+    font-size: 1.3vw;
+    color: black;
+    font-weight: normal;
+}

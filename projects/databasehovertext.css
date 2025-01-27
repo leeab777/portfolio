@@ -1,0 +1,189 @@
+.text-box-sql {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 14vw;
+    width: 40vw;
+    top: -45%;
+    right: 3%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-under-con {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 2vw;
+    width: 15vw;
+    top: -95%;
+    right: 3vmax;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-sql.small-hex-bar-under-con {
+    position: relative;
+}
+
+.small-hex-bar-sql:hover .text-box-sql {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-under-con:hover .text-box-under-con {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+@media (max-width: 800px){
+    .text-box-sql {
+        top: -20%;
+        right: 8%;
+        height: 20vw;
+        width: 45vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 680px) {
+    .text-box-sql {
+        top: -20%;
+        right: 15%;
+        height: 35vw;
+        width: 35vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-box-sql {
+        top: -15%;
+        right: 10%;
+        height: 50vw;
+        width: 40vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .text-box-sql {
+        top: -10%;
+        right: 15%;
+        height: 65vw; 
+        width: 55vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .text-box-sql {
+        top: -5%;
+        right: 10%;
+        height: 85vw;
+        width: 56vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 250px) {
+    .text-box-sql.text-box-under-con{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .text-box-under-con{
+        top: -75%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .text-box-under-con{
+        top: -75%;
+    }
+}
+
+@media (max-width: 920px) {
+    .text-box-under-con{
+        top: -67%
+    }
+}
+
+@media (max-width: 815px) {
+    .text-box-under-con{
+        top: -60%;
+        width: 20vw;
+    }
+}
+
+@media (max-width: 710px) {
+    .text-box-under-con{
+        top: -53%;
+    }
+}
+
+@media (max-width: 615px) {
+    .text-box-under-con{
+        top: -46%;
+        width: 23vw;
+    }
+}
+
+@media (max-width: 520px) {
+    .text-box-under-con{
+        top: -40%;
+        width: 28vw;
+    }
+}
+
+@media (max-width: 435px) {
+    .text-box-under-con{
+        top: -34%;
+        width: 34vw;
+    }
+}
+
+@media (max-width: 355px) {
+    .text-box-under-con{
+        top: -29%;
+        width: 40vw;
+    }
+}
+
+@media (max-width: 290px) {
+    .text-box-under-con{
+        top: -24%;
+        width: 48vw
+    }
+}

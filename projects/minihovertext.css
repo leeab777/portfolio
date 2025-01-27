@@ -1,0 +1,135 @@
+.text-box-mini-calculator {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 9vw;
+    width: 40vw;
+    top: -70%;
+    right: 6%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-tetrisish {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 9vw;
+    width: 30vw;
+    top: -70%;
+    right: 6%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-mini-calculator.small-hex-bar-tetrisish.small-hex-bar-under-con {
+    position: relative;
+}
+
+.small-hex-bar-mini-calculator:hover .text-box-mini-calculator {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-tetrisish:hover .text-box-tetrisish {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-under-con:hover .text-box-under-con {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+@media (max-width: 860px) {
+    .text-box-mini-calculator, .text-box-tetrisish{
+        top: -25%;
+    }
+}
+@media (max-width: 800px){
+    .text-box-mini-calculator, .text-box-tetrisish {
+        top: -20%;
+        right: 8%;
+        height: 20vw;
+        width: 45vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 680px) {
+    .text-box-mini-calculator, .text-box-tetrisish {
+        top: -20%;
+        right: 15%;
+        height: 35vw;
+        width: 35vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-box-mini-calculator, .text-box-tetrisish{
+        top: -15%;
+        right: 10%;
+        height: 50vw;
+        width: 40vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .text-box-mini-calculator, .text-box-tetrisish{
+        top: -10%;
+        right: 15%;
+        height: 65vw;
+        width: 55vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .text-box-mini-calculator, .text-box-tetrisish{
+        top: -5%;
+        right: 10%;
+        height: 85vw;
+        width: 56vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 250px) {
+    .text-box-mini-calculator, .text-box-tetrisish{
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,11 @@
+.sql-project-image {
+    height: 10vw;
+}
+
+.terminal-based-calculator {
+    height: 10vw;
+    width: auto;
+    object-fit: contain;
+    max-height: 100%;
+    display: block;
+}

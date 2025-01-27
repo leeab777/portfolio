@@ -1,0 +1,181 @@
+.hexagon-container2 {
+    position: relative;
+    height: 10vw;
+    z-index: 0;
+}
+
+.hexagon-terminal {
+    height: 10vw;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: black;
+    margin-top: -2.3%;
+    margin-left: 23%;
+    width: 8vw;
+    height: 8vw;
+}
+
+.block-line-container2 {
+    position: relative;
+    left: 25vw;
+    top: -3vw;
+}
+
+.block-line-terminal {
+    position: absolute;
+    left: 21vw;
+    top: 7.5vw;
+    width: 5.9vw;
+    height: 1vw;
+    background-color: black;
+    transform: rotate(208deg);
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+}
+
+.block-line-terminal-h {
+    position: absolute;
+    left: 19vw;
+    bottom: 5vw;
+    width: 5.2vw;
+    height: 1vw;
+    background-color: black;
+    transform: rotate(90deg);
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+}
+
+.small-hexagon-terminal {     /*hexagon style*/
+    width: 6vw;
+    height: 6vw;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: absolute;
+    margin-left: 24%;
+    margin-top: 1%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-colour 0.3s ease;
+}
+
+.small-hexagon-terminal span {
+    font-size: 48px;
+    color: black;
+}
+
+.small-hexagon-terminal:hover {
+    transform: scale(1.1);   /*slight zoom effect on hover*/
+    background-color: green;
+}
+
+.line-text-terminal {
+    position: absolute;
+    top: 3.2vw;
+    left: 34%;
+    font-size: 1.4vw;
+    color: #6ab2fa;
+    font-weight: bold;
+    z-index: 5;
+    transform: translateX(-50%);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    visibility: visible;
+}
+
+.bar-container-terminal {       /*bar container (hidden by default)*/
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 33%;   /*position to the right of the hexagon*/
+    transform: translateY(-50%);
+    visibility: hidden;   /*initially hidden*/
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+    padding-left: 10vw;
+    z-index: 2;
+}
+
+.bar-container-terminal.active {
+    visibility: visible;
+    opacity:1;
+}
+
+.bar-container-terminal.active::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: -5%;
+    width: 100%;
+    height: 2vw;
+    background-color: black;
+    transform-origin: top-left;
+    z-index: 1;
+    visibility: visible;
+}
+
+.hexagon-container-terminal.active .bar-container-terminal.active {    /*hover effect for main hexagon*/
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+}
+
+.bar-container-terminal:hover {
+    opacity: 1; 
+    visibility: visible;
+}
+
+.hexagon-terminal:hover {
+    cursor: pointer;
+}
+
+.small-hexagon-bar-terminal {    /*small hex in the bar*/
+    width: 6vw;
+    height: 6vw;
+    background-color: black;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+}
+
+.small-hexagon-bar-terminal:before {
+    content: '';
+    position: absolute;
+    width: 1vw;
+    height: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.small-hexagon-bar-terminal img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    clip-path: none;
+    margin-left: 13%;
+    margin-top: 8%;
+}
+
+.small-hexagon-bar-terminal:hover {
+    transform: scale(1.1);
+}
+
+.hexagon-icon-terminal {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    clip-path: none;
+    z-index:10;
+}
+

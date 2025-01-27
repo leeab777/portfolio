@@ -1,0 +1,177 @@
+.hexagon-container4 {
+    position: relative;
+    left: 22vw;
+    top: -5vw;
+}
+
+.hexagon-mini {
+    height: 10vw;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: black;
+    margin-top: 2.9%;
+    margin-left: -12.8%;
+    width: 8vw;
+    height: 8vw;
+}
+
+.block-line-container4 {
+    position: relative;
+    left: 20vw;
+    top: -3vw;
+}
+
+.block-line-mini {
+    position: absolute;
+    left: -35.7vw;
+    top: 3.2vw;
+    width: 5.9vw;
+    height: 1vw;
+    background-color: black;
+    transform: rotate(208deg);
+    z-index: 2;
+}
+
+.block-line-mini-h {
+    position: absolute;
+    left: -37.8vw;
+    bottom: -0.6vw;
+    width: 5.2vw;
+    height: 1vw;
+    background-color: black;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+.small-hexagon-mini {     /*hexagon style*/
+    width: 6vw;
+    height: 6vw;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: absolute;
+    margin-left: -11.8%;
+    margin-top: 1%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-colour 0.3s ease;
+}
+
+.small-hexagon-mini span {
+    font-size: 48px;
+    color: black;
+}
+
+.small-hexagon-mini:hover {
+    transform: scale(1.1);   /*slight zoom effect on hover*/
+    background-color: green;
+}
+
+.line-text-mini {
+    position: absolute;
+    top: 3.4vw;
+    left: -0.4%;
+    font-size: 1.4vw;
+    color: #45a0fa;
+    font-weight: bold;
+    z-index: 5;
+    transform: translateX(-50%);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    visibility: visible;
+}
+
+.bar-container-mini {       /*bar container (hidden by default)*/
+    display: flex !important;
+    position: absolute;
+    top: 48%;
+    left: -3%;   /*position to the right of the hexagon*/
+    transform: translateY(-50%);
+    visibility: hidden;   /*initially hidden*/
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+    padding-left: 10vw;
+    z-index: 2;
+}
+
+.bar-container-mini.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.bar-container-mini.active::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: -5%;
+    width: 100%;
+    height: 2vw;
+    background-color: black;
+    transform-origin: top-left;
+    z-index: 1;
+    visibility: visible;
+}
+
+.hexagon-container-mini.active .bar-container-mini.active {    /*hover effect for main hexagon*/
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+}
+
+.bar-container-mini:hover {
+    opacity: 1; 
+    visibility: visible;
+}
+
+.hexagon-mini:hover {
+    cursor: pointer;
+}
+
+.small-hexagon-bar-mini {    /*small hex in the bar*/
+    width: 6vw;
+    height: 6vw;
+    background-color: black;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+}
+
+.small-hexagon-bar-mini:before {
+    content: '';
+    position: absolute;
+    width: 1vw;
+    height: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.small-hexagon-bar-mini img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    clip-path: none;
+    margin-left: 13%;
+    margin-top: 8%;
+}
+
+
+.small-hexagon-bar-mini:hover {
+    transform: scale(1.1);
+}
+
+.hexagon-icon-mini {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    clip-path: none;
+    z-index: 10;
+}

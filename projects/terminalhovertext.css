@@ -1,0 +1,137 @@
+.text-box-tcalculator {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 10vw;
+    width: 40vw;
+    top: -45%;
+    right: 3%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-cashm {      /*initially hide text box*/
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    height: 10vw;
+    width: 40vw;
+    top: -45%;
+    right: 3%;
+    background-color: white;
+    border: 1px solid black;
+    padding:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-tc.small-hex-bar-atm.small-hex-bar-under-con {
+    position: relative;
+}
+
+.small-hex-bar-tc:hover .text-box-tcalculator {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-atm:hover .text-box-cashm {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.small-hex-bar-under-con:hover .text-box-under-con {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease;
+}
+
+.text-box-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+@media (max-width: 1100px) {
+    .text-box-tcalculator, .text-box-cashm{
+        top: -20%;
+        height: 15vw;
+    }
+}
+
+@media (max-width: 800px){
+    .text-box-tcalculator, .text-box-cashm {
+        top: -20%;
+        right: 8%;
+        height: 20vw;
+        width: 45vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 680px) {
+    .text-box-tcalculator, .text-box-cashm {
+        top: -20%;
+        right: 15%;
+        height: 35vw;
+        width: 35vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-box-tcalculator, .text-box-cashm {
+        top: -15%;
+        right: 10%;
+        height: 50vw;
+        width: 40vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .text-box-tcalculator, .text-box-cashm{
+        top: -10%;
+        right: 15%;
+        height: 65vw;
+        width: 55vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .text-box-tcalculator, .text-box-cashm{
+        top: -5%;
+        right: 10%;
+        height: 85vw;
+        width: 56vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 250px) {
+    .text-box-tcalculator, .text-box-cashm{
+        font-size: 8px;
+    }
+}
